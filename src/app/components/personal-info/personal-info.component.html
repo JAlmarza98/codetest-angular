@@ -1,0 +1,26 @@
+<div class="perfil mb-3">
+  <div>
+    <img
+      class="rounded-circle"
+      [src]='user.img'
+      width="55px"
+      height="55px"
+    />
+  </div>
+  <div class="ms-2">
+    <span class="fw-bold">{{user.name}}</span><br />
+    <span class="text-black-50">{{user.interactions}} interactions</span>
+  </div>
+</div>
+<div class="col-12 mb-3">
+  <span class="text-black-50">EMAIL</span><br />
+  {{user.email}}
+</div>
+<div class="col-12 mb-3">
+  <span class="text-black-50">PHONE</span><br />
+  {{user.phone}}
+</div>
+<div class="col-12 mb-3">
+  <span class="text-black-50">LOCATION</span><br />
+  {{user.city}}
+</div>

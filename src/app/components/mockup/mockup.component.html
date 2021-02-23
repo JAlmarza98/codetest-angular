@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-8 offset-2 mt-3 content px-5 py-3">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-6 text-black-50">PASSENGER INFO</div>
+          <div class="col-6 text-end">
+            <span class="me-3 align-top">Hide information</span>
+            <label class="switch">
+              <input
+                id="checkbox"
+                type="checkbox"
+                name="sendemail"
+                [(ngModel)]="isChecked"
+              />
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mt-3" *ngIf="!isChecked" [@inOutAnimation]>
+        <div class="row">
+          <div class="col-4">
+            <app-personal-info [i]="index" ></app-personal-info>
+          </div>
+          <div class="col-6 offset-2">
+            <app-payment [i]="index"></app-payment>
+          </div>
+          <div class="col-8 offset-2 mt-3">
+            <app-travel [i]="index"></app-travel>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

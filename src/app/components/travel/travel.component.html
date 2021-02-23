@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="icon start mb-3"><i class="fas fa-check"></i></div>
+      <span class="fw-bold">{{travel.start.place}}</span><br />
+      <span class="text-black-50">{{travel.start.address}}</span>
+    </div>
+    <div class="col-6">
+      <div class="icon destiny mb-3">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <span class="fw-bold">{{travel.end.place}}</span><br />
+      <span class="text-black-50">{{travel.end.address}}</span>
+    </div>
+    <div class="col-12 mt-5 info">
+      <app-info *ngFor="let data of travel.info" [data]="data"></app-info>
+    </div>
+  </div>
+</div>
